@@ -1,8 +1,8 @@
-import { Routes } from '@angular/router'
+import { Routes } from '@angular/router';
 
-import { RolesComponent } from '@src/app/modules/settings/pages/roles/roles.component'
-import { UsersComponent } from '@src/app/modules/settings/pages/users/users.component'
-import { SettingsComponent } from '@src/app/modules/settings/settings.component'
+import { RolesComponent } from '@src/app/modules/settings/pages/roles/roles.component';
+import { UsersComponent } from '@src/app/modules/settings/pages/users/users.component';
+import { SettingsComponent } from '@src/app/modules/settings/settings.component';
 
 export const SETTINGS_ROUTES: Routes = [
 	{
@@ -29,4 +29,4 @@ export const SETTINGS_ROUTES: Routes = [
 		pathMatch: 'full',
 		redirectTo: ''
 	}
-]
+];

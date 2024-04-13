@@ -11,7 +11,7 @@
 							formControlName="username"
 							placeholder="Username"
 							type="text"
-							[status]="username.dirty ? (username.invalid ? 'danger' : 'success') : 'basic'"
+							[status]="username?.dirty ? (username?.invalid ? 'danger' : 'success') : 'basic'"
 							fullWidth
 						/>
 						<control-error controlName="username" />
@@ -23,7 +23,7 @@
 							placeholder="Password"
 							status="primary"
 							type="password"
-							[status]="password.dirty ? (password.invalid ? 'danger' : 'success') : 'basic'"
+							[status]="password?.dirty ? (password?.invalid ? 'danger' : 'success') : 'basic'"
 							fullWidth
 						/>
 						<control-error controlName="password" />

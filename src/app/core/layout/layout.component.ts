@@ -1,14 +1,14 @@
-import { Component, effect, inject } from '@angular/core'
-import { RouterOutlet } from '@angular/router'
+import { Component, effect, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
-import { NbCardModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbSpinnerModule } from '@nebular/theme'
+import { NbCardModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbSpinnerModule } from '@nebular/theme';
 
-import { FooterComponent } from '@src/app/core/layout/components/footer/footer.component'
-import { HeaderComponent } from '@src/app/core/layout/components/header/header.component'
-import { Menu, MenuService, SpinnerService } from '@src/app/core/services'
+import { FooterComponent } from '@src/app/core/layout/components/footer/footer.component';
+import { HeaderComponent } from '@src/app/core/layout/components/header/header.component';
+import { Menu, MenuService, SpinnerService } from '@src/app/core/services';
 
-const NB_MODULES = [NbLayoutModule, NbSpinnerModule, NbSidebarModule, NbMenuModule, NbCardModule]
-const COMPONENTS = [FooterComponent, HeaderComponent]
+const NB_MODULES = [NbLayoutModule, NbSpinnerModule, NbSidebarModule, NbMenuModule, NbCardModule];
+const COMPONENTS = [FooterComponent, HeaderComponent];
 
 @Component({
 	selector: 'app-layout',
@@ -42,17 +42,17 @@ const COMPONENTS = [FooterComponent, HeaderComponent]
 	styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-	private _spinnerService = inject(SpinnerService)
-	private _menuService = inject(MenuService)
+	private _spinnerService = inject(SpinnerService);
+	private _menuService = inject(MenuService);
 
-	public spinner: boolean = false
-	public menu: Menu[] = []
+	public spinner: boolean = false;
+	public menu: Menu[] = [];
 
 	constructor() {
-		this.menu = this._menuService.menu
+		this.menu = this._menuService.menu;
 
 		effect(() => {
-			this.spinner = this._spinnerService.getStatusSpinner
-		})
+			this.spinner = this._spinnerService.getStatusSpinner;
+		});
 	}
 }
